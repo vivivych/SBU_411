@@ -1,22 +1,29 @@
 ﻿#include<iostream>
 using namespace std;
 
+//name value
+//#define DATA_TYPES
+//#define DECLARATION_OF_VARIABLES	//Объявление переменных
+
 void main()
 {
 	setlocale(LC_ALL, "");
+
+#if defined DATA_TYPES	//Если определено DATA_TYPES,
+	//то нижеследующий код до директивы #endif будет виден Компилятору.
 	cout << "DataTypes" << endl;
 	cout << true << endl;
 
+	cout << DBL_MAX << endl;
+#endif
 
-
-	//cout << DBL_MAX << endl;
-
-	//int a = 2;	// целое число со знаком (может хранить как полодительные, так и отрицательные целые числа)
-	//signed int b = 3;	//целое число со знаком (может хранить как полодительные, так и отрицательные целые числа)
-	//unsigned int c = 5;	//беззнаковое целое число (может хранить только положительные целые числа)
+#if defined DECLARATION_OF_VARIABLES
+	int a = 2;	// целое число со знаком (может хранить как полодительные, так и отрицательные целые числа)
+	signed int b = 3;	//целое число со знаком (может хранить как полодительные, так и отрицательные целые числа)
+	unsigned int c = 5;	//беззнаковое целое число (может хранить только положительные целые числа)
 	
-	//double priceOfCoffee;
-	//double price_of_coffee;
+	double priceOfCoffee;
+	double price_of_coffee;
 	//snake_case_style - змеиный стиль именования переменных
 	//PascalCaseStyle - CamelCaseStyle
 	//smallCamel
@@ -29,6 +36,20 @@ void main()
 	cout << "Введите стоимость чашки кофе: ";	cin >> price_of_coofee;
 	cout << "Введите количество Ваших Бро:";	cin >> number_of_bros;
 	cout << "Общая стоимость: " << price_of_coofee * number_of_bros << " руб.\n";
+#endif
+
+	//					ИНИЦИАЛИЗАЦИЯ
+	//					ПРОИНИЦИАЛИЗИРОВАТЬ
+	//	Инициализация - это присвоение начального значения
+	//	Init - Начало.
+	int a;		//Объявление переменной (без инициализации)
+	int b = 3;	//Инициализация переменной при объявлении
+	int c;
+	c = 4;		//Инициализация переменной после объявления
+
+	int d;
+	cout << "Введите целое число: ";
+	cin >> d;	//Инициализация переменной после объявления
 }
 
 /*
