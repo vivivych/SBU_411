@@ -4,6 +4,7 @@ using namespace std;
 //name value
 //#define DATA_TYPES
 //#define DECLARATION_OF_VARIABLES	//Объявление переменных
+//#define INITIALIZATION
 
 void main()
 {
@@ -38,10 +39,11 @@ void main()
 	cout << "Общая стоимость: " << price_of_coofee * number_of_bros << " руб.\n";
 #endif
 
+#ifdef INITIALIZATION
 	//					ИНИЦИАЛИЗАЦИЯ
-	//					ПРОИНИЦИАЛИЗИРОВАТЬ
-	//	Инициализация - это присвоение начального значения
-	//	Init - Начало.
+//					ПРОИНИЦИАЛИЗИРОВАТЬ
+//	Инициализация - это присвоение начального значения
+//	Init - Начало.
 	int a;		//Объявление переменной (без инициализации)
 	int b = 3;	//Инициализация переменной при объявлении
 	int c;
@@ -49,7 +51,16 @@ void main()
 
 	int d;
 	cout << "Введите целое число: ";
-	cin >> d;	//Инициализация переменной после объявления
+	cin >> d;	//Инициализация переменной после объявления  
+#endif // INITIALIZATION
+
+	int speed = 0;
+	const int MAX_SPEED = 250;	//КОНТАНТЫ ВСЕГДА НАЗЫВАЮТСЯ БОЛЬШИМИ БУКВАМИ!!!
+
+	cout << 1024 << endl;
+	cout << sizeof(1024) << endl;
+	cout << typeid(1024ULL).name() << endl;
+	cout << 5. << endl;
 }
 
 /*
