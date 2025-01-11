@@ -12,10 +12,10 @@ void main()
 	setlocale(LC_ALL, "");
 	double a, b;//Числа, вводимые пользователем.
 	char s;		//Sign - знак операции.
-	cout << "Введите простое арифметическое выражение: ";
-	cin >> a >> s >> b;
 
 #ifdef CALC_IF_ELSE
+	cout << "Введите простое арифметическое выражение: ";
+	cin >> a >> s >> b;
 	if (s == '+')
 	{
 		cout << a << " + " << b << " = " << a + b << endl;
@@ -39,14 +39,24 @@ void main()
 #endif // CALC_IF_ELSE
 
 #ifdef CALC_SWITCH
-	switch (s)
+	cout << "Введите простое арифметическое выражение: ";
+	cin >> a;
+	do
 	{
-	case '+': cout << a << " + " << b << " = " << a + b << endl; break;
-	case '-': cout << a << " - " << b << " = " << a - b << endl; break;
-	case '*': cout << a << " * " << b << " = " << a * b << endl; break;
-	case '/': cout << a << " / " << b << " = " << a / b << endl; break;
-	default:  cout << "Error: No operation" << endl;
-	}
+		//cout << a;
+		cin >> s >> b;
+		switch (s)
+		{
+		case '+': a += b; break;
+		case '-': a -= b; break;
+		case '*': a *= b; break;
+		case '/': a /= b; break;
+		default:  cout << "Error: No operation" << endl;
+		}
+		//cout << a << s << b << " = " << a << endl;
+		cout << " = ";
+		cout << a;
+	} while (true);
 #endif // CALC_SWITCH
 
 }
