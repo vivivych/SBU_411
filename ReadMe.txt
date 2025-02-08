@@ -59,6 +59,8 @@ TODO:
 	- + - + -
 	+ - + - +
 
+8. https://github.com/okovtun/SBU_411/blob/master/ControlStructures/Picture/ChessBoard.jpg
+9. https://github.com/okovtun/SBU_411/blob/master/ControlStructures/Picture/HardChess.jpg
 
 
 TOREAD:
