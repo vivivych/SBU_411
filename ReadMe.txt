@@ -61,6 +61,9 @@ TODO:
 
 8. https://github.com/okovtun/SBU_411/blob/master/ControlStructures/Picture/ChessBoard.jpg
 9. https://github.com/okovtun/SBU_411/blob/master/ControlStructures/Picture/HardChess.jpg
+10. ***** Вывести на экран треугольник Паскаля;
+11. Свою дату рождения раздклить на 2 группы по 4 разряда, и перевести эти группы в двоичную,
+    а потом в Шестнадцатеричную системы счисления, и сделать проверку;
 
 
 TOREAD:
