@@ -1,58 +1,29 @@
 #include <iostream>
-#include <conio.h>
-using namespace std;
-//#define SQUARE
-//#define TRIANGLE_INCREASE
 
+using namespace std;
+
+#include <stdio.h>
 int main()
 {
-	//setlocale(LC_ALL, "");
-#ifdef SQUARE
-
-	int n, m;
-	cin >> n;
-	cin >> m;
-	for (int i = 0; i < n; i++)
-	{
-		for (int i = 0; i < m; i++)
-		{
-			cout << "* ";
-
-		}
-		cout << endl;
-	}
-#endif
-#ifdef TRIANGLE_INCREASE
-
-	int n;
+	setlocale(LC_ALL, "");
+	int n, x, y, c, q;
+	cout << " ¬ведите кол-во строк: " << endl;
 	cin >> n;
 
-	for (int i = 0; i < n; i++)
+	for (y = 0; y < n; y++)
 	{
-		for (int a = 0; a <= i; a++)
+		c = 1;
+		for (q = 0; q < n - y; q++)
 		{
-			cout << "* ";
-
+			cout << "  ";
 		}
-		cout << endl;
-	}
-#endif
-	//cout << "\u25A0" << endl;
-	//cout << (char)254 << endl;
-	//cout << (char)254u;
-	//cout << (char)253u;
-	printf("\x1B[31m \033[0m\t\t");
-	int num;
-	cin >> num;
-	for (int i = 0; i < num; i++)
-	{
-		for (int i = 0; i < num; i++)
+		for (x = 0; x <= y; x++)
 		{
-			if (i == 2)
-				cout << endl;
-			cout << (char)254u << (char)255u;
-
+			cout << "    " << c;
+			c = c * (y - x) / (x + 1);
 		}
-		cout << endl;
+		cout << "\n";
 	}
+	cout << "\n";
+	return 0;
 }
