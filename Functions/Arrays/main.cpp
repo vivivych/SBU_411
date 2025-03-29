@@ -1,11 +1,18 @@
 ﻿#include<iostream>
 using namespace std;
 
+#define delimiter "\n----------------------------------------\n"
+
+const int ROWS = 4;
+const int COLS = 5;
+
 void FillRand(int arr[], const int n);	//Заполняет массив случайными числами
 void FillRand(double arr[], const int n);	//Заполняет массив случайными числами
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Sort(int arr[], const int n);
 void Sort(double arr[], const int n);
@@ -55,6 +62,20 @@ void main()
 	//cout << "Введите количество сдвигов: "; cin >> shifts;
 	//ShiftLeft(brr, SIZE, shifts);
 	//Print(brr, SIZE);
+	cout << delimiter << endl;
+
+	//		Объявление двумерного массива:
+
+	int i_arr_2[ROWS][COLS] =
+	{
+		{3,5,8},
+		{13,21,34},
+		{55,89,144},
+	};
+
+	FillRand(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
+	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
 }
 
 void FillRand(int arr[], const int n)
@@ -72,7 +93,16 @@ void FillRand(double arr[], const int n)
 		arr[i] /= 100;
 	}
 }
-
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand();
+		}
+	}
+}
 void Print(int arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
@@ -86,6 +116,18 @@ void Print(double arr[], const int n)
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << "\t";
+	}
+	cout << endl;
+}
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] << "\t";
+		}
+		cout << endl;
 	}
 	cout << endl;
 }
