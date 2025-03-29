@@ -4,6 +4,9 @@ using namespace std;
 void FillRand(int arr[], const int n);	//Заполняет массив случайными числами
 void Print(int arr[], const int n);
 void Sort(int arr[], const int n);
+int Sum(int arr[], const int n);
+double Avg(int arr[], const int n);
+
 
 void main()
 {
@@ -15,6 +18,8 @@ void main()
 	Print(arr, n);		//Вывод исходного массива на экран:
 	Sort(arr, n);		//Сортировка массива:
 	Print(arr, n);		//Вывод отсортированного массива на экран:
+	cout << "Сумма элементов массива: " << Sum(arr, n) << endl;
+	cout << "Среднее-арифметическое элементов массива: " << Avg(arr, n) << endl;
 
 	const int SIZE = 8;
 	int brr[SIZE];
@@ -22,6 +27,8 @@ void main()
 	Print(brr, SIZE);
 	Sort(brr, SIZE);
 	Print(brr, SIZE);
+	cout << "Сумма элементов массива: " << Sum(brr, SIZE) << endl;
+	cout << "Среднее-арифметическое элементов массива: " << Avg(brr, SIZE) << endl;
 }
 
 void FillRand(int arr[], const int n)
@@ -53,4 +60,17 @@ void Sort(int arr[], const int n)
 			}
 		}
 	}
+}
+int Sum(int arr[], const int n)
+{
+	int sum = 0;
+	for (int i = 0; i < n; i++)
+	{
+		sum += arr[i];
+	}
+	return sum;
+}
+double Avg(int arr[], const int n)
+{
+	return (double)Sum(arr, n) / n;
 }
