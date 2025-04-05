@@ -1,18 +1,8 @@
-﻿#include<iostream>
-using namespace std;
-
-#define delimiter "\n----------------------------------------\n"
-
-const int ROWS = 3;
-const int COLS = 4;
-
-void FillRand(int arr[], const int n);	//Заполняет массив случайными числами
-void FillRand(double arr[], const int n);	//Заполняет массив случайными числами
-void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
-
-void Print(int arr[], const int n);
-void Print(double arr[], const int n);
-void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
+﻿#include"stdafx.h"
+#include"constants.h"
+#include"FillRand.h"
+//#include"FillRand.cpp"	//Реализации функций НЕ подключаются на место вывоза
+#include"Print.h"
 
 void Sort(int arr[], const int n);
 void Sort(double arr[], const int n);
@@ -102,59 +92,6 @@ void main()
 	Print(i_arr_2, ROWS, COLS);
 }
 
-void FillRand(int arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		arr[i] = rand() % 100; //функция возвращает псевдослучайное число в диапозоне от 0 до 32676
-	}
-}
-void FillRand(double arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		arr[i] = rand() % 10000; //функция возвращает псевдослучайное число в диапозоне от 0 до 32676
-		arr[i] /= 100;
-	}
-}
-void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand, int maxRand)
-{
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			arr[i][j] = rand() % (maxRand - minRand) + minRand;
-		}
-	}
-}
-void Print(int arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << "\t";
-	}
-	cout << endl;
-}
-void Print(double arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << "\t";
-	}
-	cout << endl;
-}
-void Print(int arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			cout << arr[i][j] << "\t";
-		}
-		cout << endl;
-	}
-	cout << endl;
-}
 
 void Sort(int arr[], const int n)
 {
