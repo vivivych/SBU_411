@@ -6,10 +6,12 @@ using namespace std;
 1. По значению - by value;
 2. По указателю - by pointer;
 3. По ссылке - by reference;
+
+	Reference - это переменная, которая содержит адрес другой переменной.
 -----------------------
 */
 
-void Exchange(int a, int b);
+void Exchange(int& a, int& b);
 
 void main()
 {
@@ -20,7 +22,7 @@ void main()
 	cout << a << "\t" << b << endl;
 }
 
-void Exchange(int a, int b)
+void Exchange(int& a, int& b)
 {
 	int buffer = a;
 	a = b;
