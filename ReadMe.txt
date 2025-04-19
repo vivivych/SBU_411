@@ -12,6 +12,28 @@ TODO:
 0. !!!!!!!!!!!!!	Выучить теорию по указателям	!!!!!!!!!!!!!
 1. От ветки 'FunctionTemplates' создать ветку 'SeparatedTemplates' и в ней 
    вынести шаблонные функции в отдельные файлы;
+   https://learn.microsoft.com/en-us/cpp/cpp/templates-cpp?view=msvc-170
+
+   -------- Задания повышенной сложности (не обязательны для выполнения) ----------
+
+2. *** Обеспечить использование перегруженных и шаблонных функций в других проектах
+   при помощи статической библиотеки. 
+	На отдельных ветках:
+	2.1.	собрать статическую библиотеку (*.lib-файл) из перегруженных функций, 
+			и проветрить ее на другом проекте, например 'Functions\LIBcheck';
+	2.2.	собрать статическую библиотеку (*.lib-файл) из шаблонных функций, 
+			и проветрить ее на другом проекте, например 'Functions\TemplatedLIBcheck';
+			https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/cpp/libraries/faq-standard-cpp-library
+			https://learn.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-static-library-cpp?view=msvc-170
+			https://blogs.embarcadero.com/create-and-use-static-library-lib-and-dynamic-dlls-in-c-builder/
+3. *** Обеспечить использование перегруженных и шаблонных функций в других проектах
+   при помощи динамической библиотеки (*.dll-файл). 
+	На отдельных ветках:
+	3.1.	собрать динамическую библиотеку (*.dll-файл) из перегруженных функций, 
+			и проветрить ее на другом проекте, например 'Functions\DLLcheck';
+	3.2.	собрать динамическую библиотеку (*.dll-файл) из шаблонных функций, 
+			и проветрить ее на другом проекте, например 'Functions\TemplatedDLLcheck';
+			https://learn.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp?view=msvc-170
 
 DONE:
 1. Добить разделение функций на файлы;
