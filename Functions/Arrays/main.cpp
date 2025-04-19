@@ -10,37 +10,30 @@ void FillRand(int arr[], const int n);	//Заполняет массив слу�
 void FillRand(double arr[], const int n);	//Заполняет массив случайными числами
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 
+//*.h-файла
+//*.cpp-файл
+//Unresolved externals
+//Function already been defined in ....
+
 //template - создает шаблон
 //typename - создает шаблонный тип
 //T - имя шаблонного типа
-template<typename T>
-void Print(T arr[], const int n);
-template<typename T>
-void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>void Print(T arr[], const int n);
+template<typename T>void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-void Sort(T arr[], const int n);
-template<typename T>
-void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>void Sort(T arr[], const int n);
+template<typename T>void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-T Sum(T arr[], const int n);
-template<typename T>
-T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS);
-template<typename T>
-double Avg(T arr[], const int n);
-template<typename T>
-double Avg(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>T Sum(T arr[], const int n);
+template<typename T>T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>double Avg(T arr[], const int n);
+template<typename T>double Avg(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-T MinValueIn(T arr[], const int n);
-template<typename T>
-T MinValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>T MinValueIn(T arr[], const int n);
+template<typename T>T MinValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-T MaxValueIn(T arr[], const int n);
-template<typename T>
-T MaxValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>T MaxValueIn(T arr[], const int n);
+template<typename T>T MaxValueIn(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void ShiftLeft(int arr[], const int n, const int shifts);
 void ShiftLeft(double arr[], const int n, const int shifts);
