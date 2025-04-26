@@ -23,7 +23,7 @@
     <ProjectGuid>{148B414B-DA74-4A8B-9AF4-AB893FE79755}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Arrays</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -143,7 +143,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FillRand.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Shift.cpp" />
+    <ClCompile Include="TemplatedArrayFunctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="FillRand.h" />
+    <ClInclude Include="Shift.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TemplatedArrayFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
