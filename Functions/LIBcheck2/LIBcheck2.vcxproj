@@ -20,14 +20,14 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{148B414B-DA74-4A8B-9AF4-AB893FE79755}</ProjectGuid>
+    <ProjectGuid>{B4C95680-3BDA-46F0-959D-0D10ACBA4844}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Arrays</RootNamespace>
+    <RootNamespace>LIBcheck2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -89,10 +89,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Arrays.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -143,17 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FillRand.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Shift.cpp" />
-    <ClCompile Include="TemplatedArrayFunctions.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="constants.h" />
-    <ClInclude Include="FillRand.h" />
-    <ClInclude Include="Shift.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="TemplatedArrayFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
